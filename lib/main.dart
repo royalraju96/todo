@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:todo/src/module/home/home.dart';
-import 'package:todo/src/module/login/login.dart';
 import 'package:todo/src/module/login/services/shared_pref.dart';
 
 void main() async {
@@ -44,13 +43,12 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    print(isUserLoggedIn);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: isUserLoggedIn ? const Home() : const Login(),
+      home: const Home(),
     );
   }
 }
